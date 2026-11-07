@@ -1,110 +1,90 @@
 # GRANTLY
+### Rethinking the Scholarship Experience
 
 **Your Future Deserves Funding.**
 
 GRANTLY is a frontend demonstration of a unified scholarship discovery and management platform. It is designed to help students explore opportunities, compare listing criteria with a student profile, shortlist scholarships, organize preparation, and track demo application records.
 
-## Problem
+## Problem Statement
 
-Scholarship information and application preparation can feel scattered. Students need a clear place to discover relevant opportunities, understand listed requirements, save options, and keep track of their next steps.
+Accessing educational financial assistance can be a complicated journey for students. Finding relevant opportunities, understanding available options, navigating application processes, and keeping track of important information can often create unnecessary challenges.
 
-## Solution
+The challenge is to rethink how students interact with scholarship opportunities and develop a digital experience that makes this journey simpler, more intuitive, and accessible.
 
-GRANTLY brings those tasks together in a responsive student workspace. Its matching experience uses transparent, deterministic comparisons against the criteria in the included sample dataset. Scholarship listings and providers are fictional and are not official funding programs.
+Design and build a modern digital solution that addresses the challenges associated with discovering and managing educational financial assistance.
 
-## Key features
+Your approach, interpretation, design decisions, and implementation are entirely up to you.
 
-- Dashboard with illustrative funding metrics, deadlines, sample activity, and category chart.
-- Scholarship discovery with search, combined filters, sorting, and URL-synchronized state.
-- Scholarship details with eligibility guidance, a per-scholarship document checklist, local reminder preference, and a clearly labeled demo application flow.
-- Smart Match with explainable criteria results based on profile information.
-- Application tracker with local demo records, status updates, notes, search, filters, and sorting.
-- Student profile editor with field validation and profile completion guidance.
-- Saved scholarships with search, sorting, and local persistence.
-- In-app notifications derived from local reminders, saved scholarship deadlines, and tracker records.
-- Responsive sidebar navigation and accessible keyboard focus styling.
+**The objective is to transform a complex experience into a seamless digital journey.**
 
-## Tech stack
+## Our Solution
 
-- React 18 and Vite
-- JavaScript (ES modules)
-- Tailwind CSS v3 and project CSS design tokens
+GRANTLY is a unified scholarship discovery and management platform designed to simplify the entire scholarship journey. It brings scholarship exploration, eligibility matching, application preparation, and progress tracking together in one intuitive student workspace.
+
+## Key Features
+
+- **Dashboard:** Overview of scholarships, deadlines, funding metrics, and activity.
+- **Scholarship Discovery:** Search, filter, and sort scholarship opportunities.
+- **Smart Match:** Compare student profile information against scholarship eligibility criteria.
+- **Scholarship Details:** View requirements, eligibility guidance, and application steps.
+- **Document Checklist:** Organize application preparation for each scholarship.
+- **Application Tracker:** Track demo applications, update statuses, and add notes.
+- **Saved Scholarships:** Bookmark and manage interesting opportunities.
+- **Notifications:** View deadline-related and application-related in-app updates.
+- **Student Profile:** Manage academic and personal profile information.
+- **Responsive Design:** Accessible student experience across desktop, tablet, and mobile.
+
+## Tech Stack
+
+- React 18
+- Vite
+- JavaScript
+- Tailwind CSS v3
 - React Router DOM
 - Lucide React
 - Recharts
-- Browser LocalStorage for frontend demo persistence
+- Browser LocalStorage
 
-## Project structure
+## Live Demo
 
-```text
-src/
-├── assets/
-├── components/
-│   ├── dashboard/
-│   ├── layout/
-│   ├── matching/
-│   ├── scholarships/
-│   ├── tracker/
-│   └── ui/
-├── context/
-├── data/
-├── hooks/
-├── pages/
-├── styles/
-└── utils/
-```
+https://grant-grant-f6e7.vercel.app/
 
-## Requirements
+## Source Code
 
-- Node.js 20.19+ or 22.12+ (supported by the installed Vite 6 toolchain)
+https://github.com/sivanier/grantly
+
+## Getting Started
+
+### Requirements
+
+- Node.js 20.19+ or 22.12+
 - npm
 
-## Install and run locally
+### Installation
 
-```bash
+\`\`\`bash
+git clone https://github.com/sivanier/grant.git
+cd grant
 npm install
 npm run dev
-```
+\`\`\`
 
-Vite prints the local development URL in the terminal.
+### Production Build
 
-## Production build
-
-```bash
+\`\`\`bash
 npm run build
 npm run preview
-```
+\`\`\`
 
-The production site is generated in `dist/`.
+## Demo Data and Limitations
 
-## Deploy to Vercel
+- Scholarship listings and providers are fictional demonstration data, not official funding programs.
+- Scholarship amounts and deadlines are illustrative and are not verified or guaranteed.
+- The Apply Now flow creates a local demo application record; it does not submit a real application.
+- Profile information, saved scholarships, checklists, reminders, application records, and notification preferences are stored in browser LocalStorage.
+- The platform does not currently provide backend authentication, cross-device synchronization, or actual email, SMS, and push notifications.
+- Users should not enter sensitive identity or banking information.
 
-1. Push the project to a GitHub, GitLab, or Bitbucket repository.
-2. Import that repository in Vercel.
-3. Set the build command to `npm run build` and the output directory to `dist` (also configured in `vercel.json`).
-4. Deploy. The rewrite configuration serves the React entry point for client-side routes.
+## Project Objective
 
-Alternatively, install the Vercel CLI and run `vercel` from the project root, following its prompts.
-
-## Deploy to Netlify
-
-1. Push the project to a Git repository and import it in Netlify.
-2. Set the build command to `npm run build` and publish directory to `dist` (also configured in `netlify.toml`).
-3. Deploy. The SPA redirect serves the entry point for React Router routes.
-
-Alternatively, build locally and publish the generated `dist/` directory with the Netlify CLI or dashboard.
-
-## Demo data and limitations
-
-- Every scholarship and provider in the bundled dataset is fictional demonstration content. Advertised amounts and deadlines are illustrative, not verified or guaranteed.
-- Apply Now creates a local demo tracker record only after confirmation. It does not submit an application to a provider.
-- Profile information, saved scholarships, document checklist progress, reminder preferences, application records, and notification read/dismiss state are stored in this browser's LocalStorage. They are not synchronized across devices and may be cleared by browser storage settings.
-- Reminders and notifications are in-app demo behavior only. The app does not send push notifications, email, or SMS.
-- Do not enter sensitive identity or banking information. There is no backend or account authentication.
-
-## Submission checklist
-
-- Confirm the production build with `npm run build`.
-- Commit the source and deployment configuration to your Git repository.
-- Import the repository into Vercel or Netlify and verify a direct refresh on a nested route, such as `/saved` or `/scholarships/aarohan-future-makers`.
-- Share the resulting deployment URL after confirming it loads successfully.
+GRANTLY aims to make scholarship discovery and management simpler by bringing essential student-focused tools into one unified digital experience.
